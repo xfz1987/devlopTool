@@ -1,0 +1,23 @@
+# 以'#' 开始的行，被视为注释.
+# 忽略掉所有文件名是 foo.txt 的文件.
+# foo.txt
+# 忽略所有生成的 html 文件,
+# *.html
+# foo.html是手工维护的，所以例外.
+# !foo.html
+#  忽略所有.o 和 .a文件.
+# *.[oa]
+# /bootstrap/compiled.php
+# /vendor
+# composer.phar
+# .env.*.php
+# .env.php
+# .DS_Store
+# Thumbs.db
+# sftp-config.json
+# /nbproject/private/
+.idea
+
+# app/controllers/TestController.php
+
+# app/views/test/index.blade.php

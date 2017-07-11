@@ -1,0 +1,33 @@
+1.liveStyle
+  * 安装
+    a.Chrome浏览器添加扩展插件 liveStyle
+    b.SublimeText安装 liveStyle插件
+
+  * 功能
+    支持 浏览器 <-> sublime css文件(非内联、内嵌)样式的双向同步，
+          debug修改 -> css文件改变
+          浏览器样式自动改变  <- css文件改变
+
+
+2.liveReload
+  支持 html/css/js/图片等所有文件的修改，ctrl+s 保存后，相当于自动按了F5插件
+  chrome环境
+  a.Chrome浏览器添加扩展插件 liveReload
+  b.node: sudo npm install -g livereload
+  c.启动 ：项目路径下启动livereload  
+  
+  firefox环境：
+  a.firefox浏览器添加扩展插件 liveReload
+  b.SublimeText安装插件 liveReload 
+    然后在sublime的工具栏 Preferences -> package Setting -> liveReload -> Plugins - > Enable/disable plugins
+    按 Enter 然后选择 Enable - Simple Reload
+
+3.Browser-Sync,建议结合gulp使用
+  仅仅对变化的文件局部刷新，而liveReload只是F5全部刷新
+  而且不需要安装Chrome浏览器添加扩展插件，只需要安装node的插件
+  
+  a.npm install -g browser-sync
+  b.启动 项目文件目录下  
+    静态网站: browser-sync start --server --files "**/*.css, **/*.html"
+    动态网站：
+  c.browser-sync start --proxy "主机名" "css/*.css"
